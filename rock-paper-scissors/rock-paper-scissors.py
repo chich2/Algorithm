@@ -1,4 +1,4 @@
-# SW Expert Academy 1936번 문제
+# SW Expert Academy 1936
 
 def main():
     rst = input_rpc()
