@@ -1,6 +1,5 @@
 # SW Expert Academy 1936번 문제
 
-
 def main():
     rst = input_rpc()
     print(rpc(rst))
