@@ -1,54 +1,15 @@
 # SW Expert Academy 2072번 문제
 
 
-# 테스트 케이스 갯수 입력받기
-def input_t_case():
-    t = int(input())
-    return t
-
-
-# 10개의 수 입력받기
-def input_numbers():
-    n = input()
-    list_n = n.split(" ")       # int 형태는 split 함수적용 불가할 수 있음 에러나면 input_tcase 확인
-    if chk_10(list_n):
-        if chk_rng(list_n):
-            return list_n
-
-
-# 리스트 요소 갯수가 10개 맞는지 체크
-def chk_10(l):
-    if len(l)==10:
-        return True
-    else:
-        return False
-
-
-# 리스트 각 요소들이 0~10000 범위인지 체크
-def chk_rng(l):
-    for n in l:
-        if n<0 or n>10000:
-            return False
-    return True
-
-
-#홀수 골라내기
-def sort_odd(l):
-    for n in l:
-        if n%2 == 0:
-            l[n-1] = 0
-
-
-# 리스트 요소들 전부 더하기
-def add_all(l):
-    sum = 0
-    for n in l:
-        sum += n
-    return sum
-
-
 def main():
-    print("start")
+    T = int(input())        # int 형태로 입력받을때 필수
+    for i in range(0, T):   # range 이상 미만       이미레인지
+        num_temp = input().split()      # input 받은 문장을 바로 스플릿 해서 집어넣기
+        sum_temp = 0                    # split => list로 변경됨
+        for j in num_temp:              # so, num_temp 는 list
+            if int(j) % 2 is not 0:     # is not
+                sum_temp += int(j)      # += 가능
+        print("#" + str(i + 1) + " " + str(sum_temp))       # 이미레인지라 +1 해주는 모습
 
 
 if __name__ == '__main__':
