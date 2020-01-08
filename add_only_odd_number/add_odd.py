@@ -1,4 +1,4 @@
-# SW Expert Academy 2072번 문제
+# SW Expert Academy 2072
 
 
 def main():
