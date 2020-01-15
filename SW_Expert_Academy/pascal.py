@@ -3,11 +3,13 @@ def make_pascal(scale):
     result.append([1])
     for i in range(1, scale):
         result_child = []
-        for j in range(scale):
-            if j is 0 or i == j:
+        for j in range(i):
+            if j is 0 or i-j is 1:
                 result_child.append(1)
             else:
-                result_child.append(int(result[i-1][j-1]) + int(result[i-1][j]))
+                temp = int(result[i-1][j-1])
+                temp += int(result[i-1][j])
+                result_child.append(temp)
         result.append(result_child)
     print(result)
 
