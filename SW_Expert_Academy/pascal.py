@@ -1,3 +1,5 @@
+# swea 2005
+
 def make_pascal(scale):
     result = []
     result.append([1])
