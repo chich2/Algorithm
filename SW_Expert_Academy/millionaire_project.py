@@ -1,4 +1,4 @@
-# swea 1859
+# swea 1859번
 
 
 def max_num(numbers):           # 가장 큰 수의 인덱스와 그 값을 찾아줌
@@ -30,5 +30,6 @@ for tc in range(T):
     print('#{}'.format(tc+1))
     N = int(input())
     aaa(N)
+
 
     # 가장 큰 수 뒤에 있는 수들도 활용해야한다. 추가해야함!!!!
