@@ -10,18 +10,25 @@ def max_num(numbers):           # 가장 큰 수의 인덱스와 그 값을 찾�
     return temp
 
 
-def aaa():
+def aaa(N):
     sale_prices = input().split()
-    king = max_num(sale_prices)
-    sum = 0
-    for element in range(int(king[0])):
-        sum += (int(king[1]) - int(sale_prices[element]))
-    print(sum)
+    while True:
+        king = max_num(sale_prices)
+        sum = 0
+        for element in range(int(king[0])):
+            sum += (int(king[1]) - int(sale_prices[element]))
+        print(sum)
+        if king[0] is (N-1):
+            break
+        else:
+            sale_prices = sale_prices[int(king[0])+1:]
+            N = N - int(king[0]) + 1
 
 
 T = int(input())
 for tc in range(T):
-    print('#{}'.format(tc), end=' ')
-    aaa()
+    print('#{}'.format(tc+1))
+    N = int(input())
+    aaa(N)
 
     # 가장 큰 수 뒤에 있는 수들도 활용해야한다. 추가해야함!!!!
