@@ -12,11 +12,15 @@ def make_pascal(scale):
                 temp = int(result[i-2][j-2])        # 리스트: 0<= < n 이라는 것 명심!
                 temp += int(result[i-2][j-1])
                 result_child.append(temp)
+        for element in range(len(result_child)):
+            print(str(result_child[element]), end=' ')
+        print()
         result.append(result_child)
-    print(result)
+
 
 
 T = int(input())
 for tc in range(T):
+    print("#{}".format(tc+1))
     N = int(input())
     make_pascal(N)
