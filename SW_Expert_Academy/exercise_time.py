@@ -15,4 +15,4 @@ def calculate_times(para_times):
 TestCase = int(input())
 for test_case in range(TestCase):
     times = list(map(int,input().split()))
-    print("#{} {}".format(test_case + 1, calculate_times(times)))
+    print("#{} {}".format(test_case + 1, calculate_times(times)))       # format 함수 {} 안에 아무것도 안 넣어도 괜찮다.
