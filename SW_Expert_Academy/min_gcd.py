@@ -8,7 +8,7 @@ def gcd(numbers):
                 is_gcd_number = False
         if is_gcd_number == True:
             return gcd_number
-
+ 
 
 # gcd 함수 테스트
 # list = [6,9,12]
