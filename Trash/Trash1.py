@@ -1,3 +1,4 @@
-vi = [0] * (100 * 100 + 1)
+y = [x for x in range(1,3+1)]
+y.reverse()
 
-print(vi)
+print(y)
