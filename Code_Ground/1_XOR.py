@@ -13,7 +13,10 @@ def xor(numbers):
         is_odd(odd_numbers, i)
 
     # 홀수개의 요소들만 모아진 odd_numbers를 가지고 XOR 연산을 해야한다.
-
+    answer = 0
+    for j in odd_numbers:
+        answer = answer ^ j
+    print(answer)
 
 
 T = int(input())
