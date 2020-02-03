@@ -21,8 +21,8 @@ def compare_points_for_max_length(line):
     start_point = line[0]
     end_point = line[1]
     max_line = 0
-    for point in range(start_point, end_point+1):
-        for half_line in
+    # for point in range(start_point, end_point+1):
+        # for half_line in
 
 
 # main
