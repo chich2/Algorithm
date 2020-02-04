@@ -2,7 +2,7 @@
 
 # 주어진 선분
 def make_line():
-    line = input().split()
+    line = list(map(int, input().split()))
     return line
 
 
@@ -17,25 +17,26 @@ def make_set_of_points():
 
 
 def max_length_from_point(point, set_of_points):
-    x_point = int(point[0])
-    y_point = int(point[1])
+    x_point = point
+    y_point = 0
     half_length = 0
 
     while True:
         for i in range(x_point - half_length, x_point + half_length +1):
             for j in range(y_point - half_length, y_point + half_length +1):
-                if set_of_points.get([i,j]) != None:
-                    return half_length * 2
+                for point in set_of_points:
+                    if point == [i,j]:
+                        return half_length * 2
         half_length += 1
 
 
 
 
 def compare_points_for_max_length(line, set_of_points):
-    start_point = int(line[0])
-    end_point = int(line[1])
+    start_point = line[0]
+    end_point = line[1] +1
     max_line = 0
-    for point in range(start_point, end_point + 1):
+    for point in range(start_point, end_point):
         temp_line = max_length_from_point(point, set_of_points)
         if max_line < temp_line:
             max_line = temp_line
