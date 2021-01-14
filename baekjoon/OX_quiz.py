@@ -4,11 +4,14 @@
 # 입력
 num_test = int(input())
 
-scr = 0
-cnt_o = 1
+# scr = 0
+# cnt_o = 1
 
 for tc in range(num_test):
     str = input()
+
+    scr = 0
+    cnt_o = 1
     for char in str:
         if(char == 'O'):
             scr += cnt_o
@@ -16,7 +19,6 @@ for tc in range(num_test):
         else:
             cnt_o = 1
     print(scr)
-    scr = 0
-    cnt_o = 1
+
 
 
