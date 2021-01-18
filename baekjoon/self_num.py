@@ -8,9 +8,9 @@ def make_not_self_num(num):
 
 
 not_self_nums = []
-for cnt in range(10001):
+for cnt in range(1, 10001):
     not_self_nums.append(make_not_self_num(cnt))
 
-for num in range(10001):
+for num in range(1, 10001):
     if num not in not_self_nums:
         print(num)
