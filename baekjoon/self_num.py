@@ -1,3 +1,5 @@
+# 4673
+
 def make_not_self_num(num):
     pre_num = num
     list_num = list(map(int, str(num).split()))
