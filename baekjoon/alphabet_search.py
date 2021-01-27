@@ -10,6 +10,9 @@ for i in range(26):
 word = list(input())
 for idx_word in range(0, len(word)):
     idx_alpha = ord(word[idx_word]) - 97
-    list_alpha[idx_alpha] = idx_word
+    if list_alpha[idx_alpha] == -1:
+      list_alpha[idx_alpha] = idx_word
 
 # print
+for i in list_alpha:
+    print(i, end=' ')
